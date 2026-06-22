@@ -1,0 +1,30 @@
+# MATLAB / Simulink
+*.slxc
+*.slx.autosave
+*.slx.orig
+*.asv
+*.autosave
+slprj/
+sccprj/
+*.mex*
+*.p
+
+# Simulink cache
+*.dmr
+*.rtw
+*_sfprj/
+
+# MATLAB Code Analyzer
+CodeAnalyzer/
+
+# OS
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Claude
+.claude/
+
+# IDE
+.vscode/
+.idea/
