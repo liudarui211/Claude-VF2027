@@ -1,5 +1,16 @@
 # 前轴双轮边电机 TCS 牵引力控制器
 
+> ⚠️ **重要声明**
+>
+> 本项目**完全由 Claude（AI）生成**，代码未经正式测试与仿真验证，参数未经过实车标定。当前仅通过了 MATLAB 环境下的基本单元测试（9 项），尚未在任何实际硬件平台（如 dSPACE、NI、嵌入式 ECU）上运行过。
+>
+> - **滑移率计算**中的低速保护阈值 (0.5 m/s)、PI 增益参数 (Kp=800, Ki=200) 均为理论初值，实际车辆需根据轮胎特性、路面条件重新标定。
+> - **死区阈值** (±2%)、积分抗饱和上下限等参数同样为经验估算，不保证在实际工况下的稳定性与鲁棒性。
+> - **Simulink 模型**未进行 MIL/SIL/HIL 验证，离散求解器步长 (5 ms) 是否满足实时性要求需在实际目标硬件上确认。
+> - 🚧 **本项目仅供学习交流与方案参考，请勿直接用于实车控制。** 如有大佬发现 Bug 或设计缺陷，欢迎提 Issue / PR 指正，十分感谢！
+>
+> 如果你要把它用在真实赛车上：**请先做仿真验证 → 台架测试 → 实车标定，一步一步来。**
+
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2026a-blue)](https://www.mathworks.com/products/matlab.html)
 [![Simulink](https://img.shields.io/badge/Simulink-R2026a-orange)](https://www.mathworks.com/products/simulink.html)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
